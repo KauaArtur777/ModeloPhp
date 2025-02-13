@@ -23,7 +23,7 @@ $num_linhas = $lista->num_rows;
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail ">
                    <a href="produto_detalhes.php?id=<?php echo $row_produto ['id']?>">
-                       <img src="images/<?php echo $row_produto ['descricao']?>" alt="" class="img-responsive img-rounded"> 
+                       <img src="images/<?php echo $row_produto['imagem']?>" alt="" class="img-responsive img-rounded"> 
                    </a> 
                   <div class="caption text-right bg-danger"> 
                     <h3 class="text-danger">

@@ -5,7 +5,7 @@ body{
     padding-top: 40px;
 }
 .fundofixo{
-    background: url('../imagens/churrascaria123.jpg.jpg') no-repeat fixed;
+    background: url('../imagens/churrascaria123.jpg') no-repeat fixed;
     -webkit-background-size: cover;
     background-size: cover;
 }

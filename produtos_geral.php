@@ -21,7 +21,7 @@ $num_linhas = $lista->num_rows;
              <div class="col-sm-6 col-md-4">  <!--mexer na coluna do site -->
                 <div class="thumbnail">
                    <a href="produto_detalhes.php?id=<?php echo $row_produtos['id'] ?>">
-                       <img src="images/<?php echo $row_produtos['imagem'] ?>" alt="" class="img-responsive img-rounded"> 
+                       <img src="imagens/<?php echo $row_produtos['imagem'] ?>" alt="" class="img-responsive img-rounded"> 
                    </a> 
                   <div class="caption text-right bg-success"> 
                     <h3 class="text-danger">
