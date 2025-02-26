@@ -27,10 +27,10 @@ $num_linhas = $lista->num_rows;
                    </a> 
                   <div class="caption text-right bg-danger"> 
                     <h3 class="text-danger">
-                        <strong><?php echo mb_strimwidth ($row_produto ['resumo'],0,40,'...') ?></strong>
+                        <strong><?php echo $row_produto['descricao']?></strong>
                     </h3>
                     <p class="text-warning">
-                        <strong></strong>
+                        <strong><?php echo mb_strimwidth ($row_produto ['resumo'],0,40,'...') ?></strong>
                     </p>
                     <p class="text-left">
                         
