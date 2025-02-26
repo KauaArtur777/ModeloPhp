@@ -6,7 +6,7 @@ include '../conn/connect.php';
 include '../conn/connect.php';
 $lista = $conn->query("select * from vw_produtos");
 $row = $lista->fetch_assoc();
-$row = $lista->num_rows; //obtém o numero total do registro
+$rows = $lista->num_rows; //obtém o numero total do registro
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -43,25 +43,15 @@ $row = $lista->num_rows; //obtém o numero total do registro
            	        <!-- início estrutura repetição -->
                      <?php 
                      //incluir loop para alterar registro de produto
-                     do{
-                        
-                        
-
-                     ?>
-               
+                    do {?>
                     <tr>
                         <td class="hidden">
                             <?php 
                             //exibe rotulo do produto
-                            echo $row ['id'];?>
-                            
-                            
+                            echo $row ['id']; ?>  
                         </td>
                         <td>
-                            <?php 
-                            echo $row['rotulo'];
-                            ?>
-                            
+                            <?php echo $row['rotulo']; ?>
                             <span class="visible-xs"></span>
                             <span class="hidden-xs"></span>
                         </td>
@@ -85,9 +75,7 @@ $row = $lista->num_rows; //obtém o numero total do registro
                         </td>
                         <td>
                             <?php 
-                            echo $row['resumo']
-                            ?>
-                          
+                            echo $row['resumo'];?>
                         </td>
                         <td>
                            <?php 
@@ -114,18 +102,14 @@ $row = $lista->num_rows; //obtém o numero total do registro
                                 <!-- não mostrar o botão excluir se o produto estiver em destaque -->
                                  <?php 
                                  // execulta uma query para verificar o status do destaque do produto atual
-                                  $regra = $conn->query("select destaque from vw_produtos where = id = " .$row['id']);
-
+                                  $regra = $conn->query("select destaque from vw_produtos where id = ".$row['id']);
                                   //obtem o resultado da query como array assoc
                                   $regraRow = $regra->fetch_assoc();
                                   ?>
-                                
-
                             <button 
                                 data-nome="<?php
                                 //define o atributo data-nome com descricao do produto
-                                echo $row['descricao']
-
+                                echo $row['descricao'];
                                 ?>"
                                 data-id=""
                                 class="delete btn btn-xs btn-block btn-danger

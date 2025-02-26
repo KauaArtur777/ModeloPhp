@@ -63,7 +63,7 @@ $numLinhas = $ListaTipo->num_rows;
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
                 </a>
-                Inserindo Produtos
+                Tipos insere
             </h2>
             <div class="thumbnail">
                 <div class="alert alert-danger" role="alert">
